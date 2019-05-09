@@ -2,6 +2,8 @@
   <dictionary name="dell">
     <words>
       <w>bfst</w>
+      <w>dcgraph</w>
+      <w>topo</w>
     </words>
   </dictionary>
 </component>
