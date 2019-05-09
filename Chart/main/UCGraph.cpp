@@ -212,7 +212,11 @@ public:
      * @param articulation_points 割点的集合
      */
     void Articulation_Point(vector<int>& articulation_points){
-        Articulation_Point_DFS(0, articulation_points);
+        for(int i=0; i<vex_; i++){
+            if(points[i].getColor()=="white"){
+                Articulation_Point_DFS(i, articulation_points);
+            }
+        }
         sort(articulation_points.begin(), articulation_points.end());
         clear_UCGraph();
     }
@@ -246,7 +250,11 @@ public:
     }
 
     void Bridge(vector<tuple<int, int>>& bridges){
-        Bridge_DFS(0, bridges);
+        for(int i=0; i<vex_; i++){
+            if(points[i].getColor()=="white"){
+                Bridge_DFS(0, bridges);
+            }
+        }
         sort(bridges.begin(), bridges.end());
         clear_UCGraph();
     }
@@ -263,7 +271,7 @@ public:
         }
     }
 };
-
+/*
 int main(){
     int n = 5;
     //cin >> n;
@@ -273,7 +281,6 @@ int main(){
             make_tuple(2,4)
     };
     UCGraph ucGraph(n,edges);
-    //ucGraph.Print();
 
     vector<int> a_points;
     ucGraph.Articulation_Point(a_points);
@@ -287,3 +294,4 @@ int main(){
         cout << get<0>(b) << " " << get<1>(b) << endl;
     }
 }
+ */

@@ -23,8 +23,8 @@ private:
     int time;
 public:
     explicit DCGraph(int n);
-    DCGraph(int n, const vector<tuple<int, int>> edges);
-    DCGraph(int n, int m, const vector<tuple<int, int>> edges);
+    DCGraph(int n, const vector<tuple<int, int>> points);
+    DCGraph(int n, const vector<tuple<int, int>> points, vector<tuple<int, int>> edges);
     bool isValid(const int v1, const int v2);
     void DFS(int v);
     void DFS_Wrapper();
@@ -34,6 +34,7 @@ public:
     void BFS_Wrapper();
     void Topo_Order(int v);
     void Topo_Wrapper();
+    void clear_DCGraph();
     void Print();
 };
 
