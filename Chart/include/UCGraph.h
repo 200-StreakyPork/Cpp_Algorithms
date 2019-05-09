@@ -28,6 +28,7 @@ public:
     bool isValid(const int v1, const int v2);
     int Articulation_Point_DFS(int v1, vector<int>& articulation_points);
     void Articulation_Point(vector<int>& articulation_points);
+    void clear_UCGraph();
     void Print();
 };
 

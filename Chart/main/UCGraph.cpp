@@ -157,6 +157,20 @@ public:
         return adjacency_matrix[v1][v2]!=0;
     }
 
+    /*
+     * 清空无向图
+     */
+    void clear_UCGraph(){
+        time = 0;
+        for(int i=0; i<vex_; i++){
+            points[i].setColor("white");
+            points[i].setDiscoverTime(0);
+            points[i].setFinishTime(0);
+            points[i].setBack(0);
+            points[i].setParent(NULL);
+        }
+    }
+
     /**
      * 基于DFS寻找割点
      * @param v1 起点
@@ -168,7 +182,6 @@ public:
         time++;
         points[v1].setDiscoverTime(time);
         points[v1].setBack(time);
-        //cout << "时间是" << time <<" 当前点:" << v1 << " discoverTime:" << points[8].getDiscoverTime() << " back:" << points[8].getBack() << endl;
         for(int i=0; i<vex_; i++){
             if(isValid(v1,i) && v1!=i) { //找到邻居
                 if(points[i].getColor()=="white"){ //白色节点，递归
@@ -201,8 +214,42 @@ public:
     void Articulation_Point(vector<int>& articulation_points){
         Articulation_Point_DFS(0, articulation_points);
         sort(articulation_points.begin(), articulation_points.end());
+        clear_UCGraph();
     }
-    。。3.3.。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。333333333333333333333333333333333333333333333333333333333333333
+
+    void Bridge_DFS(int v, vector<tuple<int, int>>& bridges){
+        points[v].setColor("grey");
+        time = time + 1;
+        points[v].setDiscoverTime(time);
+        points[v].setBack(time);
+        //cout << "此时是" << time << "当前节点:" << v << endl;
+        for(int i=0; i<vex_; i++){
+            if(isValid(v, i) && v!=i){ //可达性检测
+                if(points[i].getColor()=="white"){
+                    points[i].setParent(&points[v]);
+                    Bridge_DFS(i, bridges);
+                    time++;
+                    points[v].setBack(min(points[v].getBack(),points[i].getBack()));
+                    if(points[i].getBack()>points[v].getDiscoverTime()){
+                        bridges.push_back(make_tuple(v,i));
+                        //cout << v << "-" << i << endl;
+                    }
+                }
+                else{
+                    if(points[i].getColor()=="grey" && points[v].getParent()->getID()!=i){
+                        points[v].setBack(min(points[v].getBack(),points[i].getDiscoverTime()));
+                    }
+                }
+            }
+        }
+        points[v].setColor("black");
+    }
+
+    void Bridge(vector<tuple<int, int>>& bridges){
+        Bridge_DFS(0, bridges);
+        sort(bridges.begin(), bridges.end());
+        clear_UCGraph();
+    }
 
     /**
      * 打印邻接矩阵
@@ -218,22 +265,25 @@ public:
 };
 
 int main(){
-    int n = 10;
+    int n = 5;
     //cin >> n;
     vector<tuple<int, int>> edges = {
-            make_tuple(0,3),make_tuple(0,5),make_tuple(0,7),
-            make_tuple(1,2),make_tuple(1,4),make_tuple(1,6),make_tuple(1,8),
-            make_tuple(2,4),
-            make_tuple(3,5),make_tuple(3,9),
-            make_tuple(4,5),
-            make_tuple(5,7),make_tuple(5,9),
-            make_tuple(6,8)
+            make_tuple(0,1),make_tuple(0,2),
+            make_tuple(1,2),make_tuple(1,3),
+            make_tuple(2,4)
     };
     UCGraph ucGraph(n,edges);
     //ucGraph.Print();
+
     vector<int> a_points;
     ucGraph.Articulation_Point(a_points);
     for(auto a: a_points){
         cout << a << endl;
+    }
+
+    vector<tuple<int, int>> bridges;
+    ucGraph.Bridge(bridges);
+    for(auto b: bridges){
+        cout << get<0>(b) << " " << get<1>(b) << endl;
     }
 }

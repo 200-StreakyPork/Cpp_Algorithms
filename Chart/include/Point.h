@@ -5,6 +5,8 @@
 
 #ifndef ALGORITHMS_POINT_H
 #define ALGORITHMS_POINT_H
+#include "string"
+using namespace std;
 
 class Point{
 private:
