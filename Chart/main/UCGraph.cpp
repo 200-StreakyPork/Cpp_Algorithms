@@ -5,10 +5,10 @@
 //
 #include <tuple>
 #include <iostream>
-#include "algorithm"
-#include "stdio.h"
-#include "vector"
-#include "string"
+#include <algorithm>
+#include <stdio.h>
+#include <vector>
+#include <string>
 using namespace std;
 
 /*
@@ -24,7 +24,7 @@ private:
     int back;
 public:
     Point(const int id){
-        Point::id = id;
+        this->id = id;
         color = "white";
         discover_time = 0;
         finish_time = 0;
@@ -32,8 +32,8 @@ public:
         parent = NULL;
     }
     Point(const int id, const int discover_time){
-        Point::id = id;
-        Point::discover_time = discover_time;
+        this->id = id;
+        this->discover_time = discover_time;
         finish_time = 0;
         back = 0;
         color = "white";
@@ -106,7 +106,7 @@ public:
         }
         time = 0;
     }
-    UCGraph(int n, const vector<tuple<int, int>> edges){
+    UCGraph(int n, const vector<tuple<int, int>>& edges){
         vex_ = n;
         edge_ = edges.size();
         adjacency_matrix = new int*[vex_];
@@ -120,13 +120,14 @@ public:
                 adjacency_matrix[i][j] = 0;
             }
         }
-        for(auto t: edges){
+        for(int i=0; i<edges.size(); i++){
+            auto t = edges[i];
             adjacency_matrix[get<0>(t)][get<1>(t)] = 1;
             adjacency_matrix[get<1>(t)][get<0>(t)] = 1;
         }
         time = 0;
     }
-    UCGraph(int n, int m, const vector<tuple<int, int>> edges){
+    UCGraph(int n, int m, const vector<tuple<int, int>>& edges){
         vex_ = n;
         edge_ = m;
         adjacency_matrix = new int*[vex_];
@@ -140,7 +141,8 @@ public:
                 adjacency_matrix[i][j] = 0;
             }
         }
-        for(auto t: edges){
+        for(int i=0; i<edges.size(); i++){
+            auto t = edges[i];
             adjacency_matrix[get<0>(t)][get<1>(t)] = 1;
             adjacency_matrix[get<1>(t)][get<0>(t)] = 1;
         }
@@ -221,6 +223,11 @@ public:
         clear_UCGraph();
     }
 
+    /**
+     * 基于DFS寻找桥
+     * @param v 起始节点
+     * @param bridges 桥的集合
+     */
     void Bridge_DFS(int v, vector<tuple<int, int>>& bridges){
         points[v].setColor("grey");
         time = time + 1;
@@ -249,6 +256,10 @@ public:
         points[v].setColor("black");
     }
 
+    /**
+     * 寻找桥
+     * @param bridges 桥的集合
+     */
     void Bridge(vector<tuple<int, int>>& bridges){
         for(int i=0; i<vex_; i++){
             if(points[i].getColor()=="white"){
@@ -273,25 +284,28 @@ public:
 };
 /*
 int main(){
-    int n = 5;
-    //cin >> n;
-    vector<tuple<int, int>> edges = {
-            make_tuple(0,1),make_tuple(0,2),
-            make_tuple(1,2),make_tuple(1,3),
-            make_tuple(2,4)
-    };
+    int n;
+    cin >> n;
+    vector<tuple<int,int>> edges;
+    while(!cin.eof()){
+        int a,b;
+        cin >> a >> b;
+        edges.push_back(make_tuple(a,b));
+    }
     UCGraph ucGraph(n,edges);
 
     vector<int> a_points;
     ucGraph.Articulation_Point(a_points);
-    for(auto a: a_points){
+    for(int i=0; i<a_points.size(); i++){
+        auto a = a_points[i];
         cout << a << endl;
     }
 
     vector<tuple<int, int>> bridges;
     ucGraph.Bridge(bridges);
-    for(auto b: bridges){
+    for(int i=0; i<bridges.size(); i++){
+        auto b = bridges[i];
         cout << get<0>(b) << " " << get<1>(b) << endl;
     }
 }
- */
+*/

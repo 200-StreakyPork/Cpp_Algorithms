@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/dell/CLionProjects/Algorithms/Chart/main/TwoPartGraph.cpp
+stdio.h
+-
+iostream
+-
+vector
+-
+string
+-
+sstream
+-
+

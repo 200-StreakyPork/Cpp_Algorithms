@@ -252,22 +252,20 @@ public:
 };
 /*
 int main(){
-    int n = 9;
-    vector<tuple<int, int>> points = {
-            make_tuple(1,10),make_tuple(2,6),make_tuple(3,5),make_tuple(4,1),make_tuple(5,2),
-            make_tuple(6,3),make_tuple(7,4),make_tuple(8,9),make_tuple(9,1)
-    };
-    vector<tuple<int, int>> edges = {
-            make_tuple(1,9),
-            make_tuple(2,1),make_tuple(2,8),
-            make_tuple(3,5),make_tuple(3,6),make_tuple(3,7),
-            make_tuple(4,2),make_tuple(4,3),
-            make_tuple(5,9),
-            make_tuple(6,9),
-            make_tuple(7,9),
-            make_tuple(8,9),
-    };
+    int n;
+    cin >> n;
+    vector<tuple<int,int>> points;
+    for(int i=0; i<n; i++){
+        int a,b;
+        cin >> a >> b;
+        points.push_back(make_tuple(a,b));
+    }
+    vector<tuple<int, int>> edges;
+    while(!cin.eof()){
+        int a,b;
+        cin >> a >> b;
+        edges.push_back(make_tuple(a,b));
+    }
     DCGraph dcGraph(n,points,edges);
     dcGraph.Critical_Path();
-}
- */
+}*/

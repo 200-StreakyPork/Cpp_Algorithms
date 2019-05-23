@@ -17,7 +17,8 @@ typedef struct Vertex{
     int color;
     int discoverTime;
     int finishTime;
-    int back;
+    int point_back;
+    int bridge_back;
 }Vertex;
 
 typedef struct Edge{
@@ -47,7 +48,8 @@ int Articulation_Point_DFS(Vertex* v) {
     v->color = GRAY;
     Time++;
     v->discoverTime = Time;
-    v->back = v->discoverTime;
+    v->point_back = v->discoverTime;
+    v->bridge_back = v->discoverTime;
     Edge* e = edge[v->data];
     while(e != NULL) {
         Vertex* w = e->endVex;
@@ -55,15 +57,23 @@ int Articulation_Point_DFS(Vertex* v) {
             e->TE = 1;
             e->returnEdge->TE = 1;
             children++; // 子树个数+1
-            w->back = Articulation_Point_DFS(w);
+            w->point_back = Articulation_Point_DFS(w);
             Time++;
-            if(w->back >= v->discoverTime && v->discoverTime!=1)//找到割点
+            v->bridge_back = min(v->bridge_back, w->bridge_back);
+            if(w->bridge_back > v->discoverTime) {
+                if (v->data < w->data)
+                    bridges.push_back(make_tuple(v->data, w->data));
+                else
+                    bridges.push_back(make_tuple(w->data, v->data));
+            }
+            if(w->point_back >= v->discoverTime && v->discoverTime!=1)//找到割点
                 articulation_points.push_back(v->data);
-            v->back = min(v->back, w->back); //更新Back记录
+            v->point_back = min(v->point_back, w->point_back); //更新Back记录
         }
         else{ //黑色节点不可能存在递归过程中，只会在回溯时存在
             if(e->TE!=1){ //灰色节点且没有父子关系
-                v->back = min(v->back, w->discoverTime); //更新Back记录
+                v->point_back = min(v->point_back, w->discoverTime); //更新Back记录
+                v->bridge_back = min(v->bridge_back, w->discoverTime);
             }
         }
         e = e->next;
@@ -72,7 +82,7 @@ int Articulation_Point_DFS(Vertex* v) {
     if(children>1 && v->data==0){
         cout << v->data << endl;
     }
-    return v->back;
+    return v->point_back;
 }
 
 /**
@@ -85,9 +95,8 @@ void Articulation_Point(){
             Articulation_Point_DFS(vex[i]);
         }
     }
-    clearGraph();
 }
-
+/*
 void Bridge_DFS(Vertex* v){
     v->color = GRAY;
     Time++;
@@ -127,13 +136,14 @@ void Bridge(){
         }
     }
 }
-
+*/
 void clearGraph() {
     for(int i=0; i<n; i++) {
         vex[i]->color = WHITE;
         vex[i]->discoverTime = 0;
         vex[i]->finishTime = 0;
-        vex[i]->back = 0;
+        vex[i]->point_back = 0;
+        vex[i]->bridge_back = 0;
     }
     Time = 0;
 }
@@ -196,12 +206,12 @@ void getData(){
     // 初始化计时器
     Time = 0;
 }
-
+/*
 int main(){
     getData();
     Articulation_Point();
-    Bridge();
+    // Bridge();
     Print();
 }
-
+*/
 

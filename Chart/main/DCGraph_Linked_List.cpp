@@ -8,9 +8,6 @@
 #include <tuple>
 using namespace std;
 
-typedef int Status;
-
-typedef int EdgeWeight;
 typedef struct EdgeNode
 {
     int Adjacency_vex; //邻接点的位置
@@ -25,7 +22,6 @@ typedef struct VertexNode
     string color;
     int startTime;
     int finishTime;
-    struct VertexNode* criticalPath;
 }VertexNode;
 
 typedef vector<VertexNode> AdjList;//邻接表
@@ -95,20 +91,17 @@ bool isValid(AdjListGraph &G, int v1,int v2){
 void Critical_Path_DFS(AdjListGraph &G, int v){
     G.adjList[v].color = "grey";
     G.adjList[v].startTime = 0;
-    G.adjList[v].criticalPath = NULL;
     for(int i=0; i<G.iVexNum; i++){
         if(isValid(G,v,i) && v!=i){
             if(G.adjList[i].color=="white"){
                 Critical_Path_DFS(G,i);
                 if(G.adjList[i].finishTime >= G.adjList[v].startTime){
                     G.adjList[v].startTime = G.adjList[i].finishTime;
-                    G.adjList[v].criticalPath = &G.adjList[i];
                 }
             }
             else{
                 if(G.adjList[i].finishTime >= G.adjList[v].startTime){
                     G.adjList[v].startTime = G.adjList[i].finishTime;
-                    G.adjList[v].criticalPath = &G.adjList[i];
                 }
             }
         }
@@ -173,7 +166,7 @@ void getData(vector<tuple<int,int>> &points, vector<tuple<int,int>> &edges){
     edges.push_back(make_tuple(6,9));edges.push_back(make_tuple(7,9));edges.push_back(make_tuple(8,9));
      */
 }
-
+/*
 int main() {
     AdjListGraph G;
     vector<tuple<int,int>> points;
@@ -185,3 +178,4 @@ int main() {
     vector<tuple<int,int>>().swap(edges);
     Critical_Path(G);
 }
+ */
