@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/dell/CLionProjects/Algorithms/Chart/main/TwoPartGraph.cpp
+C:/Users/dell/CLionProjects/Algorithms/Chart/main/SmallestPointCover.cpp
 stdio.h
 -
 iostream
@@ -16,5 +16,9 @@ vector
 string
 -
 sstream
+-
+stack
+-
+algorithm
 -
 

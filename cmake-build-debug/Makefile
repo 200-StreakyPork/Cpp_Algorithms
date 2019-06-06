@@ -122,6 +122,33 @@ Algorithms/fast:
 	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/build
 .PHONY : Algorithms/fast
 
+Chart/main/BipartiteGraph.obj: Chart/main/BipartiteGraph.cpp.obj
+
+.PHONY : Chart/main/BipartiteGraph.obj
+
+# target to build an object file
+Chart/main/BipartiteGraph.cpp.obj:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.obj
+.PHONY : Chart/main/BipartiteGraph.cpp.obj
+
+Chart/main/BipartiteGraph.i: Chart/main/BipartiteGraph.cpp.i
+
+.PHONY : Chart/main/BipartiteGraph.i
+
+# target to preprocess a source file
+Chart/main/BipartiteGraph.cpp.i:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.i
+.PHONY : Chart/main/BipartiteGraph.cpp.i
+
+Chart/main/BipartiteGraph.s: Chart/main/BipartiteGraph.cpp.s
+
+.PHONY : Chart/main/BipartiteGraph.s
+
+# target to generate assembly for a file
+Chart/main/BipartiteGraph.cpp.s:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.s
+.PHONY : Chart/main/BipartiteGraph.cpp.s
+
 Chart/main/DCGraph.obj: Chart/main/DCGraph.cpp.obj
 
 .PHONY : Chart/main/DCGraph.obj
@@ -203,6 +230,33 @@ Chart/main/DCGraph_stupid.cpp.s:
 	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/DCGraph_stupid.cpp.s
 .PHONY : Chart/main/DCGraph_stupid.cpp.s
 
+Chart/main/LargestInfluence.obj: Chart/main/LargestInfluence.cpp.obj
+
+.PHONY : Chart/main/LargestInfluence.obj
+
+# target to build an object file
+Chart/main/LargestInfluence.cpp.obj:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.obj
+.PHONY : Chart/main/LargestInfluence.cpp.obj
+
+Chart/main/LargestInfluence.i: Chart/main/LargestInfluence.cpp.i
+
+.PHONY : Chart/main/LargestInfluence.i
+
+# target to preprocess a source file
+Chart/main/LargestInfluence.cpp.i:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.i
+.PHONY : Chart/main/LargestInfluence.cpp.i
+
+Chart/main/LargestInfluence.s: Chart/main/LargestInfluence.cpp.s
+
+.PHONY : Chart/main/LargestInfluence.s
+
+# target to generate assembly for a file
+Chart/main/LargestInfluence.cpp.s:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.s
+.PHONY : Chart/main/LargestInfluence.cpp.s
+
 Chart/main/Point.obj: Chart/main/Point.cpp.obj
 
 .PHONY : Chart/main/Point.obj
@@ -230,32 +284,32 @@ Chart/main/Point.cpp.s:
 	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/Point.cpp.s
 .PHONY : Chart/main/Point.cpp.s
 
-Chart/main/TwoPartGraph.obj: Chart/main/TwoPartGraph.cpp.obj
+Chart/main/SmallestPointCover.obj: Chart/main/SmallestPointCover.cpp.obj
 
-.PHONY : Chart/main/TwoPartGraph.obj
+.PHONY : Chart/main/SmallestPointCover.obj
 
 # target to build an object file
-Chart/main/TwoPartGraph.cpp.obj:
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.obj
-.PHONY : Chart/main/TwoPartGraph.cpp.obj
+Chart/main/SmallestPointCover.cpp.obj:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.obj
+.PHONY : Chart/main/SmallestPointCover.cpp.obj
 
-Chart/main/TwoPartGraph.i: Chart/main/TwoPartGraph.cpp.i
+Chart/main/SmallestPointCover.i: Chart/main/SmallestPointCover.cpp.i
 
-.PHONY : Chart/main/TwoPartGraph.i
+.PHONY : Chart/main/SmallestPointCover.i
 
 # target to preprocess a source file
-Chart/main/TwoPartGraph.cpp.i:
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.i
-.PHONY : Chart/main/TwoPartGraph.cpp.i
+Chart/main/SmallestPointCover.cpp.i:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.i
+.PHONY : Chart/main/SmallestPointCover.cpp.i
 
-Chart/main/TwoPartGraph.s: Chart/main/TwoPartGraph.cpp.s
+Chart/main/SmallestPointCover.s: Chart/main/SmallestPointCover.cpp.s
 
-.PHONY : Chart/main/TwoPartGraph.s
+.PHONY : Chart/main/SmallestPointCover.s
 
 # target to generate assembly for a file
-Chart/main/TwoPartGraph.cpp.s:
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.s
-.PHONY : Chart/main/TwoPartGraph.cpp.s
+Chart/main/SmallestPointCover.cpp.s:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.s
+.PHONY : Chart/main/SmallestPointCover.cpp.s
 
 Chart/main/UCGrapgh_stupid.obj: Chart/main/UCGrapgh_stupid.cpp.obj
 
@@ -320,6 +374,9 @@ help:
 	@echo ... Algorithms
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Chart/main/BipartiteGraph.obj
+	@echo ... Chart/main/BipartiteGraph.i
+	@echo ... Chart/main/BipartiteGraph.s
 	@echo ... Chart/main/DCGraph.obj
 	@echo ... Chart/main/DCGraph.i
 	@echo ... Chart/main/DCGraph.s
@@ -329,12 +386,15 @@ help:
 	@echo ... Chart/main/DCGraph_stupid.obj
 	@echo ... Chart/main/DCGraph_stupid.i
 	@echo ... Chart/main/DCGraph_stupid.s
+	@echo ... Chart/main/LargestInfluence.obj
+	@echo ... Chart/main/LargestInfluence.i
+	@echo ... Chart/main/LargestInfluence.s
 	@echo ... Chart/main/Point.obj
 	@echo ... Chart/main/Point.i
 	@echo ... Chart/main/Point.s
-	@echo ... Chart/main/TwoPartGraph.obj
-	@echo ... Chart/main/TwoPartGraph.i
-	@echo ... Chart/main/TwoPartGraph.s
+	@echo ... Chart/main/SmallestPointCover.obj
+	@echo ... Chart/main/SmallestPointCover.i
+	@echo ... Chart/main/SmallestPointCover.s
 	@echo ... Chart/main/UCGrapgh_stupid.obj
 	@echo ... Chart/main/UCGrapgh_stupid.i
 	@echo ... Chart/main/UCGrapgh_stupid.s

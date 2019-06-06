@@ -89,6 +89,9 @@
 		<Unit filename="C:/Users/dell/CLionProjects/Algorithms/Chart/include/UCGraph.h">
 			<Option target="Algorithms"/>
 		</Unit>
+		<Unit filename="C:/Users/dell/CLionProjects/Algorithms/Chart/main/BipartiteGraph.cpp">
+			<Option target="Algorithms"/>
+		</Unit>
 		<Unit filename="C:/Users/dell/CLionProjects/Algorithms/Chart/main/DCGraph.cpp">
 			<Option target="Algorithms"/>
 		</Unit>
@@ -98,10 +101,13 @@
 		<Unit filename="C:/Users/dell/CLionProjects/Algorithms/Chart/main/DCGraph_stupid.cpp">
 			<Option target="Algorithms"/>
 		</Unit>
+		<Unit filename="C:/Users/dell/CLionProjects/Algorithms/Chart/main/LargestInfluence.cpp">
+			<Option target="Algorithms"/>
+		</Unit>
 		<Unit filename="C:/Users/dell/CLionProjects/Algorithms/Chart/main/Point.cpp">
 			<Option target="Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/dell/CLionProjects/Algorithms/Chart/main/TwoPartGraph.cpp">
+		<Unit filename="C:/Users/dell/CLionProjects/Algorithms/Chart/main/SmallestPointCover.cpp">
 			<Option target="Algorithms"/>
 		</Unit>
 		<Unit filename="C:/Users/dell/CLionProjects/Algorithms/Chart/main/UCGrapgh_stupid.cpp">

@@ -16,17 +16,17 @@ using namespace std;
 #define RED 4
 #define BLUE 5
 
-vector<vector<int>> edges;
-vector<int> points;
+static vector<vector<int>> edges;
+static vector<int> points;
 
-void MyPrint() {
+static void MyPrint() {
     for(int i=0; i<points.size(); i++) {
         if (points[i] == RED)
         cout << i << endl;
     }
 }
 
-bool Bipartite_DFS(int v) {
+static bool Bipartite_DFS(int v) {
     for(int i=0; i<edges[v].size(); i++) {
         int child = edges[v][i];
         if(points[child]==WHITE) { // 子节点是白色
@@ -47,12 +47,12 @@ bool Bipartite_DFS(int v) {
     return true;
 }
 
-void Bipartite() {
+static void Bipartite() {
     points[0] = RED;
     Bipartite_DFS(0);
     MyPrint();
 }
-
+/*
 int main() {
     string s;
     vector<string> p;
@@ -87,4 +87,4 @@ int main() {
 
     Bipartite();
 }
-
+*/

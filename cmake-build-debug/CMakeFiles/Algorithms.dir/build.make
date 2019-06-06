@@ -134,18 +134,44 @@ CMakeFiles/Algorithms.dir/Chart/main/UCGrapgh_stupid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/Chart/main/UCGrapgh_stupid.cpp.s"
 	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\dell\CLionProjects\Algorithms\Chart\main\UCGrapgh_stupid.cpp -o CMakeFiles\Algorithms.dir\Chart\main\UCGrapgh_stupid.cpp.s
 
-CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.obj: CMakeFiles/Algorithms.dir/flags.make
-CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.obj: ../Chart/main/TwoPartGraph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\dell\CLionProjects\Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.obj"
-	E:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Algorithms.dir\Chart\main\TwoPartGraph.cpp.obj -c C:\Users\dell\CLionProjects\Algorithms\Chart\main\TwoPartGraph.cpp
+CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.obj: CMakeFiles/Algorithms.dir/flags.make
+CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.obj: ../Chart/main/BipartiteGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\dell\CLionProjects\Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.obj"
+	E:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Algorithms.dir\Chart\main\BipartiteGraph.cpp.obj -c C:\Users\dell\CLionProjects\Algorithms\Chart\main\BipartiteGraph.cpp
 
-CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.i"
-	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\dell\CLionProjects\Algorithms\Chart\main\TwoPartGraph.cpp > CMakeFiles\Algorithms.dir\Chart\main\TwoPartGraph.cpp.i
+CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.i"
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\dell\CLionProjects\Algorithms\Chart\main\BipartiteGraph.cpp > CMakeFiles\Algorithms.dir\Chart\main\BipartiteGraph.cpp.i
 
-CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.s"
-	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\dell\CLionProjects\Algorithms\Chart\main\TwoPartGraph.cpp -o CMakeFiles\Algorithms.dir\Chart\main\TwoPartGraph.cpp.s
+CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.s"
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\dell\CLionProjects\Algorithms\Chart\main\BipartiteGraph.cpp -o CMakeFiles\Algorithms.dir\Chart\main\BipartiteGraph.cpp.s
+
+CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.obj: CMakeFiles/Algorithms.dir/flags.make
+CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.obj: ../Chart/main/LargestInfluence.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\dell\CLionProjects\Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.obj"
+	E:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Algorithms.dir\Chart\main\LargestInfluence.cpp.obj -c C:\Users\dell\CLionProjects\Algorithms\Chart\main\LargestInfluence.cpp
+
+CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.i"
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\dell\CLionProjects\Algorithms\Chart\main\LargestInfluence.cpp > CMakeFiles\Algorithms.dir\Chart\main\LargestInfluence.cpp.i
+
+CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.s"
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\dell\CLionProjects\Algorithms\Chart\main\LargestInfluence.cpp -o CMakeFiles\Algorithms.dir\Chart\main\LargestInfluence.cpp.s
+
+CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.obj: CMakeFiles/Algorithms.dir/flags.make
+CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.obj: ../Chart/main/SmallestPointCover.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\dell\CLionProjects\Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.obj"
+	E:\MinGW\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Algorithms.dir\Chart\main\SmallestPointCover.cpp.obj -c C:\Users\dell\CLionProjects\Algorithms\Chart\main\SmallestPointCover.cpp
+
+CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.i"
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\dell\CLionProjects\Algorithms\Chart\main\SmallestPointCover.cpp > CMakeFiles\Algorithms.dir\Chart\main\SmallestPointCover.cpp.i
+
+CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.s"
+	E:\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\dell\CLionProjects\Algorithms\Chart\main\SmallestPointCover.cpp -o CMakeFiles\Algorithms.dir\Chart\main\SmallestPointCover.cpp.s
 
 # Object files for target Algorithms
 Algorithms_OBJECTS = \
@@ -155,7 +181,9 @@ Algorithms_OBJECTS = \
 "CMakeFiles/Algorithms.dir/Chart/main/DCGraph_Linked_List.cpp.obj" \
 "CMakeFiles/Algorithms.dir/Chart/main/DCGraph_stupid.cpp.obj" \
 "CMakeFiles/Algorithms.dir/Chart/main/UCGrapgh_stupid.cpp.obj" \
-"CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.obj"
+"CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.obj" \
+"CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.obj" \
+"CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.obj"
 
 # External object files for target Algorithms
 Algorithms_EXTERNAL_OBJECTS =
@@ -166,12 +194,14 @@ Algorithms.exe: CMakeFiles/Algorithms.dir/Chart/main/DCGraph.cpp.obj
 Algorithms.exe: CMakeFiles/Algorithms.dir/Chart/main/DCGraph_Linked_List.cpp.obj
 Algorithms.exe: CMakeFiles/Algorithms.dir/Chart/main/DCGraph_stupid.cpp.obj
 Algorithms.exe: CMakeFiles/Algorithms.dir/Chart/main/UCGrapgh_stupid.cpp.obj
-Algorithms.exe: CMakeFiles/Algorithms.dir/Chart/main/TwoPartGraph.cpp.obj
+Algorithms.exe: CMakeFiles/Algorithms.dir/Chart/main/BipartiteGraph.cpp.obj
+Algorithms.exe: CMakeFiles/Algorithms.dir/Chart/main/LargestInfluence.cpp.obj
+Algorithms.exe: CMakeFiles/Algorithms.dir/Chart/main/SmallestPointCover.cpp.obj
 Algorithms.exe: CMakeFiles/Algorithms.dir/build.make
 Algorithms.exe: CMakeFiles/Algorithms.dir/linklibs.rsp
 Algorithms.exe: CMakeFiles/Algorithms.dir/objects1.rsp
 Algorithms.exe: CMakeFiles/Algorithms.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\dell\CLionProjects\Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Algorithms.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\dell\CLionProjects\Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Algorithms.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Algorithms.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

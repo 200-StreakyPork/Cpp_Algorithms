@@ -2,7 +2,8 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/Chart/main/UCGraph.cpp" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/Chart/test/割点与桥的测试用例.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chart/test/割点与桥.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chart/test/最大影响力.txt" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
